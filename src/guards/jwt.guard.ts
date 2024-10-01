@@ -10,7 +10,7 @@ export class JwtGuard extends AuthGuard('jwt') {
 
     getRequest(context: ExecutionContext) {
         const request = context.switchToHttp().getRequest();
-        const jwt = request.headers.authorization;
+        request.headers.authorization;
         return request;
     }
 
