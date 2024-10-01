@@ -12,7 +12,6 @@ export class AuthService {
     ) { }
 
     async createAccountService(data: Prisma.UserCreateInput): Promise<{ accessToken: string }> {
-
         const userExists = await this.prismaService.user.findUnique({
             where: {
                 email: data.email,
